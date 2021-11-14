@@ -75,7 +75,7 @@ const useFirebase = () => {
   }, [auth]);
   const saveUser = (email, displayName, method) => {
     const user = { email, displayName };
-    fetch("https://murmuring-cove-28727.herokuapp.com/users", {
+    fetch("localhost://5000users", {
       method: method,
       headers: {
         "content-type": "application/json",
@@ -84,7 +84,7 @@ const useFirebase = () => {
     }).then();
   };
   useEffect(() => {
-    fetch(`https://murmuring-cove-28727.herokuapp.com/users/${user?.email}`)
+    fetch(`localhost://5000users/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setAdmin(data.admin));
   }, [user?.email]);

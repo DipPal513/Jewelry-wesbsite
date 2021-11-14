@@ -4,7 +4,7 @@ import ReactStars from "react-stars";
 const Review = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("https://murmuring-cove-28727.herokuapp.com/reviews")
+    fetch("httplocalhost://5000p.com/reviews")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);

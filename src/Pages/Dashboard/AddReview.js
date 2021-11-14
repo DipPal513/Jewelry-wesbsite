@@ -5,7 +5,7 @@ const AddReview = () => {
     const { register, handleSubmit, watch,reset, formState: { errors } } = useForm();
   const onSubmit = (data) => {
 
-    fetch(`https://murmuring-cove-28727.herokuapp.com/reviews`,{
+    fetch(`htlocalhost://5000/reviews`,{
         method:"POST",
         headers:{'content-type':'application/json'},
         body:JSON.stringify(data)

@@ -9,7 +9,7 @@ const Explore = (props) => {
   const {admin,setIsLoading} = useAuth();
 
   useEffect(() => {
-    fetch("https://murmuring-cove-28727.herokuapp.com/jewelries")
+    fetch("https:/localhost://5000/jewelries")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
@@ -20,7 +20,7 @@ const Explore = (props) => {
     
     const isConfirm = window.confirm("Are you sure...?");
     if (isConfirm) {
-      fetch(`https://murmuring-cove-28727.herokuapp.com/deleteProduct/${id}`, {
+      fetch(`https://mlocalhost://5000${id}`, {
         method: "DELETE",
         headers: { "content-type": "application/json" },
       })

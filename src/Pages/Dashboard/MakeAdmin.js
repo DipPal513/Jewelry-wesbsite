@@ -9,7 +9,7 @@ const MakeAdmin = () => {
   };
   const handleAdminSubmit = (e) => {
     const user = { email };
-    fetch("https://murmuring-cove-28727.herokuapp.com/users/admin", {
+    fetch("://murmuring-cove-28727.localhost://5000.com/users/admin", {
       method: "PUT",
       headers: {
         "content-type": "application/json",

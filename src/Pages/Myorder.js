@@ -6,7 +6,7 @@ const MyOrder = () => {
   const [orders, setOrders] = useState();
   const { user, setIsLoading, isLoading } = useAuth();
   useEffect(() => {
-    fetch(`https://murmuring-cove-28727.herokuapp.com/placedOrder/${user?.email}`)
+    fetch(`localhost://5000${user?.email}`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [orders]);
